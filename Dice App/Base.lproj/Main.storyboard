@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="hwE-2U-gPa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5O-46-TtJ">
+                                <rect key="frame" x="95" y="673" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eiA-Vp-lph"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xq8-I9-f1F"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Roll" cornerStyle="capsule" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vuh-0R-Kqo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6tP-Ia-C0j">
+                                <rect key="frame" x="-405" y="64" width="1200" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="sHB-rQ-VJf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="nWB-Te-xLL">
+                                <rect key="frame" x="217" y="383" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="7Hp-ub-fSy"/>
+                                    <constraint firstAttribute="width" constant="130" id="uQQ-ya-lrR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-7W-PPW">
+                                <rect key="frame" x="39" y="383" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="AcF-Oq-Q6I"/>
+                                    <constraint firstAttribute="height" constant="130" id="jQk-Ph-9g2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hwE-2U-gPa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="BBY-0P-1ms"/>
+                            <constraint firstItem="G5O-46-TtJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="629" id="Bkl-JT-4pG"/>
+                            <constraint firstItem="nWB-Te-xLL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="339" id="HDL-e8-Akh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6tP-Ia-C0j" secondAttribute="bottom" constant="556" id="HSI-qF-WHi"/>
+                            <constraint firstItem="VIl-7W-PPW" firstAttribute="centerY" secondItem="hwE-2U-gPa" secondAttribute="centerY" id="JGp-Zc-CNF"/>
+                            <constraint firstItem="G5O-46-TtJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jgb-fg-A1X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nWB-Te-xLL" secondAttribute="bottom" constant="297" id="Lq8-p8-3rJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nWB-Te-xLL" secondAttribute="trailing" constant="43" id="Yfx-Nr-lIp"/>
+                            <constraint firstItem="VIl-7W-PPW" firstAttribute="top" secondItem="nWB-Te-xLL" secondAttribute="top" id="brS-qH-Aj6"/>
+                            <constraint firstItem="6tP-Ia-C0j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gOd-z6-Dp3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hwE-2U-gPa" secondAttribute="trailing" constant="-40" id="ms6-iS-pRX"/>
+                            <constraint firstItem="6tP-Ia-C0j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2L-m0-JgZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G5O-46-TtJ" secondAttribute="bottom" constant="77" id="noK-ht-1ln"/>
+                            <constraint firstItem="hwE-2U-gPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uXj-j2-xbs"/>
+                            <constraint firstItem="nWB-Te-xLL" firstAttribute="leading" secondItem="VIl-7W-PPW" secondAttribute="trailing" constant="48" id="uiH-t8-lw4"/>
+                            <constraint firstItem="VIl-7W-PPW" firstAttribute="bottom" secondItem="nWB-Te-xLL" secondAttribute="bottom" id="woO-Wc-sO6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceView1" destination="VIl-7W-PPW" id="ZBY-sU-zyi"/>
+                        <outlet property="diceView2" destination="nWB-Te-xLL" id="2fG-Km-eZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.46153846153846" y="83.175355450236964"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="300" height="300"/>
+        <image name="bg" width="1080" height="1920"/>
+        <image name="logo" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
